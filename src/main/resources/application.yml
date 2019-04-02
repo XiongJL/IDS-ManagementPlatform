@@ -2,10 +2,8 @@ spring:
   datasource: 
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/ids_rule?useUnicode=true&characterEncoding=UTF-8&useSSL=false&zeroDateTimeBehavior=convertToNull
-    username: rule  #线上以及虚拟机
-    password: neteye 
-    #username: root   #dev环境
-    #password: 246810
+    username: root   #dev环境
+    password: 246810
   jpa: 
     hibernate: 
       ddl-auto: update    #只能使用update!
@@ -24,6 +22,3 @@ spring:
 server:
   port: 8080 
 
-user: 
-  userSex: man
-  content: this is content
