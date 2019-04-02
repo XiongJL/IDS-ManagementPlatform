@@ -1,0 +1,29 @@
+spring:
+  datasource: 
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ids_rule?useUnicode=true&characterEncoding=UTF-8&useSSL=false&zeroDateTimeBehavior=convertToNull
+    username: rule  #线上以及虚拟机
+    password: neteye 
+    #username: root   #dev环境
+    #password: 246810
+  jpa: 
+    hibernate: 
+      ddl-auto: update    #只能使用update!
+    #show-sql: true
+      show-sql: false    #服务器上不输出
+  devtools: 
+    restart:
+      enabled: true #是否支持热部署
+      exclude: WEB/INF/**    #不重启的目录
+      additional-paths: src/main/java  #重启的目录
+  servlet: 
+    multipart: 
+      max-file-size: 50Mb
+      max-request-size: 50Mb
+    
+server:
+  port: 8080 
+
+user: 
+  userSex: man
+  content: this is content
